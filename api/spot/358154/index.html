@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Ambil URL saat ini
+        const currentUrl = new URL(window.location.href);
+
+        // Ambil parameter query dari URL saat ini
+        const params = currentUrl.search;
+
+        // Buat tautan tujuan dengan menyertakan parameter dari URL asli
+        const targetUrl = "https://viikayey.com/dc/?blockID=358154&tb=https%3A%2F%2Fpornhammer.co%2F&subID=";
+
+        // Redirect ke tautan tujuan
+        window.location.href = targetUrl + (params ? encodeURIComponent(params) : "");
+    </script>
+</head>
+<body>
+</body>
+</html>
