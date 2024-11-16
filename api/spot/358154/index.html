@@ -8,17 +8,20 @@
         // Ambil URL saat ini
         const currentUrl = new URL(window.location.href);
 
-        // Ambil parameter query dari URL saat ini
-        const params = currentUrl.search;
+        // Ambil parameter query dari URL saat ini (tanpa tanda "?")
+        const params = currentUrl.searchParams.toString();
 
-        // Buat tautan tujuan dengan menyertakan parameter dari URL asli dan ref=pornhammer.co
-        const targetUrl = "https://viikayey.com/dc/?blockID=358154&tb=https%3A%2F%2Fpornhammer.co%2F&subID=";
+        // Buat tautan tujuan dasar
+        const baseUrl = "https://viikayey.com/dc/?blockID=358154&tb=https%3A%2F%2Fpornhammer.co%2F";
 
-        // Tambahkan ref=pornhammer.co ke URL tujuan
-        const finalUrl = targetUrl + (params ? encodeURIComponent(params) : "") + "&ref=pornhammer.co";
+        // Tambahkan parameter ref
+        const ref = "ref=pornhammer.co";
 
-        // Redirect ke tautan tujuan
-        window.location.href = finalUrl;
+        // Gabungkan semua parameter (param asli + ref)
+        const fullParams = params ? `${params}&${ref}` : ref;
+
+        // Redirect ke tautan tujuan lengkap
+        window.location.href = `${baseUrl}&${fullParams}`;
     </script>
 </head>
 <body>
