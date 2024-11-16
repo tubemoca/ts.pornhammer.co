@@ -11,11 +11,14 @@
         // Ambil parameter query dari URL saat ini
         const params = currentUrl.search;
 
-        // Buat tautan tujuan dengan menyertakan parameter dari URL asli
-        const targetUrl = "https://a.fullpornoflix.net/api/direct/484922?subID=";
+        // Buat tautan tujuan dengan menyertakan parameter dari URL asli dan ref=pornhammer.co
+        const targetUrl = "https://viikayey.com/dc/?blockID=358154&tb=https%3A%2F%2Fpornhammer.co%2F&subID=";
+
+        // Tambahkan ref=pornhammer.co ke URL tujuan
+        const finalUrl = targetUrl + (params ? encodeURIComponent(params) : "") + "&ref=pornhammer.co";
 
         // Redirect ke tautan tujuan
-        window.location.href = targetUrl + (params ? encodeURIComponent(params) : "");
+        window.location.href = finalUrl;
     </script>
 </head>
 <body>
